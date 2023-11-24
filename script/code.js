@@ -1,12 +1,14 @@
 let minInput = document.getElementById('min');
-let secInput = document.getElementById('sec');
+let secOutput = document.getElementById('sec');
 function calculate() {
     let min = parseInt(minInput.value);
     let sec = min * 60  ;
     if (!isNaN(sec)) {
-        secInput.value = sec;
+        secOutput.value = sec;
     } else {
-        secInput.value = ''; 
+        secOutput.value = ''; 
     }
+
+    
 }
 minInput.addEventListener('input', calculate);
